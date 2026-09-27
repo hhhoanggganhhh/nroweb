@@ -1,1 +1,26 @@
 
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Chơi Ngọc Rồng Web</title>
+    <script src="https://cjrtnc.leaningtech.com/3.0/loader.js"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body, html { width: 100%; height: 100%; background-color: #000; overflow: hidden; display: flex; justify-content: center; align-items: center; }
+        #game-container { width: 100vw; height: 100vh; }
+    </style>
+</head>
+<body>
+    <div id="game-container"></div>
+    <script>
+        async function loadGame() {
+            await cheerpjInit();
+            cheerpjCreateDisplay(window.innerWidth, window.innerHeight, document.getElementById("game-container"));
+            await cheerpjRunJar("/app/DragonBoy250.jar");
+        }
+        loadGame();
+    </script>
+</body>
+</html>
